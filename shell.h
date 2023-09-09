@@ -223,9 +223,9 @@ void aux_helping_general(void);
 void aux_helping_exit(void);
 
 /* aux_help2.c */
-void aux_help(void);
-void aux_help_alias(void);
-void aux_help_cd(void);
+void auth_helping(void);
+void auth_helping_aliass(void);
+void auth_helping_container(void);
 
 /* get_help.c */
 int get_help(data_shell *datash);
