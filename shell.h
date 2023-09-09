@@ -206,7 +206,7 @@ char *error_get_alias(char **args);
 char *error_bro(data_shell *datash);
 char *error_syntax(char **args);
 char *error_permission(char **args);
-char *error_way_775(data_shell *datash);
+char *error_way_755(data_shell *datash);
 
 
 /* get_error.c */
@@ -216,11 +216,11 @@ int get_error(data_shell *datash, int eval);
 void get_sigint(int sig);
 
 /* aux_help.c */
-void aux_help_env(void);
-void aux_help_setenv(void);
-void aux_help_unsetenv(void);
-void aux_help_general(void);
-void aux_help_exit(void);
+void aux_helping_folder(void);
+void aux_helping_setfolder(void);
+void aux_helping_unsetfolder(void);
+void aux_helping_general(void);
+void aux_helping_exit(void);
 
 /* aux_help2.c */
 void aux_help(void);
