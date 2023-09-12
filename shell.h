@@ -103,11 +103,11 @@ r_var *add_end(r_var **head, int lvar, char *var, int lval);
 void free_rival(r_var **head);
 
 /* aux_str functions */
-char *_strcat(char *dest, const char *src);
-char *_strcpy(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
+char *_strcat(char *pest, const char *src);
+char *_strcpy(char *pest, char *src);
+int _strcmp(char *str, char *str2);
 char *_strchr(char *s, char c);
-int _strspn(char *s, char *accept);
+int _strspn(char *s, char *accepted);
 
 /* aux_mem.c */
 void _memorycpy(void *newptr, const void *ptr, unsigned int size);
@@ -117,8 +117,8 @@ char **_realcdp(char **ptr, unsigned int old_size, unsigned int new_size);
 /* aux_str2.c */
 char *_strdup(const char *s);
 int _strlen(const char *s);
-int cmp_chars(char str[], const char *delim);
-char *_strtok(char str[], const char *delim);
+int cmp_chars(char str[], const char *sep);
+char *_strtok(char str[], const char *sep);
 int _isdigit(const char *s);
 
 /* aux_str3.c */
