@@ -125,11 +125,11 @@ int _isdigit(const char *s);
 void reverse_string(char *s);
 
 /* check_syntax_error.c */
-int repeated_char(char *input, int i);
-int error_sep_op(char *input, int i, char last);
+int repeat_char(char *input, int i);
+int error_op(char *input, int i, char last);
 int first_char(char *input, int *i);
-void print_syntax_error(data_shell *datash, char *input, int i, int bool);
-int check_syntax_error(data_shell *datash, char *input);
+void print_error(data_shell *datash, char *input, int i, int bool);
+int check_error(data_shell *datash, char *input);
 
 /* shell_loop.c */
 char *without_comment(char *in);
@@ -158,12 +158,12 @@ ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 /* exec_line */
 int exec_line(data_shell *datash);
 
-/* cmd_exec.c */
+/* cmd_exec].c */
 int is_cdir(char *path, int *i);
-char *_which(char *cmd, char **_environ);
+char _rich(char *cmd, char **_environ);
 int is_executable(data_shell *datash);
-int check_error_cmd(char *dir, data_shell *datash);
-int cmd_exec(data_shell *datash);
+int check_error_comand(char *dir, data_shell *datash);
+int comand_exec(data_shell *datash);
 
 /* env1.c */
 char *_getenv(const char *name, char **_environ);
@@ -210,7 +210,7 @@ char *error_way_755(data_shell *datash);
 
 
 /* get_error.c */
-int get_error(data_shell *datash, int eval);
+int catch_error(data_shell *datash, int eval);
 
 /* get_sigint.c */
 void get_sigint(int sig);
