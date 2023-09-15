@@ -74,7 +74,7 @@ void change_to(data_shell *datash)
 	dir = datash->args[1];
 	if (chdir(dir) == -1)
 	{
-		get_error(datash, 2);
+		catch_error(datash, 2);
 		return;
 	}
 
@@ -159,7 +159,7 @@ void change_home(data_shell *datash)
 
 	if (chdir(home) == -1)
 	{
-		get_error(datash, 2);
+		catch_error(datash, 2);
 		free(p_pwd);
 		return;
 	}
