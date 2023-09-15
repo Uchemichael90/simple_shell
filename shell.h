@@ -160,10 +160,10 @@ int exec_line(data_shell *datash);
 
 /* cmd_exec].c */
 int is_cdir(char *path, int *i);
-char _rich(char *cmd, char **_environ);
+char *_rich(char *cmd, char **_environ);
 int is_executable(data_shell *datash);
-int check_error_comand(char *dir, data_shell *datash);
-int comand_exec(data_shell *datash);
+int check_error_command(char *dir, data_shell *datash);
+int command_exec(data_shell *datash);
 
 /* env1.c */
 char *_getenv(const char *name, char **_environ);
