@@ -151,7 +151,7 @@ char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
 char *rep_var(char *input, data_shell *datash);
 
 /* get_line.c */
-void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
+void take_line(char **lineptr, size_t *n, char *buffer, size_t j);
 ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 
 /* exec_line */
@@ -212,7 +212,7 @@ char *error_way_755(data_shell *datash);
 int catch_error(data_shell *datash, int eval);
 
 /* get_sigint.c */
-void get_sigint(int sig);
+void sigint(int sig);
 
 /* aux_help.c */
 void aux_helping_folder(void);
@@ -224,7 +224,7 @@ void aux_helping_exit(void);
 /* aux_help2.c */
 void auth_helping(void);
 void auth_helping_aliass(void);
-void auth_help_container(void);
+void auth_helping_container(void);
 
 /* get_help.c */
 int get_help(data_shell *datash);
