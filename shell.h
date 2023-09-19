@@ -109,7 +109,6 @@ int _strcmp(char *str, char *str2);
 char *_strchr(char *s, char c);
 int _strspn(char *s, char *accepted);
 
-/* aux_mem.c */
 void _memorycpy(void *newptr, const void *ptr, unsigned int size);
 void *_real(void *ptr, unsigned int old_size, unsigned int new_size);
 char **_realcdp(char **ptr, unsigned int old_size, unsigned int new_size);
@@ -152,21 +151,21 @@ char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
 char *rep_var(char *input, data_shell *datash);
 
 /* get_line.c */
-void take_line(char **lineptr, size_t *n, char *buffer, size_t j);
+void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
 ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 
 /* exec_line */
 int execute_line(data_shell *datash);
 
-/* cmd_exec].c */
+/* cmd_exec.c */
 int is_cdir(char *path, int *i);
 char *_rich(char *cmd, char **_environ);
 int is_executable(data_shell *datash);
-int check_error_command(char *dir, data_shell *datash);
-int command_exec(data_shell *datash);
+int check_error_comand(char *dir, data_shell *datash);
+int comand_exec(data_shell *datash);
 
 /* env1.c */
-char _getenv(const char *name, char *_environ);
+char *_getenv(const char *name, char **_environ);
 int _env(data_shell *datash);
 
 /* env2.c */
@@ -213,7 +212,7 @@ char *error_way_755(data_shell *datash);
 int catch_error(data_shell *datash, int eval);
 
 /* get_sigint.c */
-void sigint(int sig);
+void get_sigint(int sig);
 
 /* aux_help.c */
 void aux_helping_folder(void);
@@ -225,9 +224,9 @@ void aux_helping_exit(void);
 /* aux_help2.c */
 void auth_helping(void);
 void auth_helping_aliass(void);
-void auth_helping_container(void);
+void auth_help_container(void);
 
 /* get_help.c */
 int get_help(data_shell *datash);
 
-#endif 
+#endif /*END SHELL_H*/
