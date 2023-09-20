@@ -131,7 +131,7 @@ void print_error(data_shell *datash, char *input, int i, int bool);
 int check_error(data_shell *datash, char *input);
 
 /* shell_loop.c */
-char *without_comment(char *in);
+char *no_comment(char *in);
 void shell_loop(data_shell *datash);
 
 /* read_line.c */
@@ -141,13 +141,13 @@ char *read_line(int *i_eof);
 char *swap_char(char *input, int bool);
 void add_nodes(sep_list **head_s, line_list **head_l, char *input);
 void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);
-int split_commands(data_shell *datash, char *input);
-char **split_line(char *input);
+int spliting_commands(data_shell *datash, char *input);
+char **spliting_line(char *input);
 
 /* rep_var.c */
-void check_env(r_var **h, char *in, data_shell *data);
-int check_vars(r_var **h, char *in, char *st, data_shell *data);
-char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
+void check_folder(r_var **h, char *in, data_shell *data);
+int checked_vars(r_var **h, char *in, char *st, data_shell *data);
+char *replace_input(r_var **head, char *input, char *new_input, int nlen);
 char *rep_var(char *input, data_shell *datash);
 
 /* get_line.c */
